@@ -21,46 +21,15 @@ body {
 .indicator .text{
   font-size: 14px;
   font-family: 'Roboto Mono', monospace;
-  font-weight: 300;
+  font-weight: 200;
   color: white;
   text-align: center;
   position: relative;
   width: 100%;
   top: 200px;
+  left: 50%;
   transform: translate(-50%, -50%);
-  animation: mouse-text 2.5s cubic-bezier(0.77, 0, 0.175, 1) infinite;
 
-}
-
-@keyframes mouse-text {
-  0% {
-    transform: translateY(0);
-    opacity: 0;
-  }
-  10% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  30% {
-    transform: translateY(0);
-    height: 4px;
-  }
-  50% {
-    transform: translateY(0);
-    height: 20px;
-  }
-  70% {
-    transform: translateY(15px);
-    height: 4px;
-    opacity: 1;
-  }
-  90% {
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(15px);
-    opacity: 0;
-  }
 }
 
 .mouse {
@@ -79,8 +48,8 @@ body {
   left: 50%;
   top: 20%;
   transform: translate(-50%, -50%);
-  width: 2px;
-  height: 2px;
+  width: 4px;
+  height: 4px;
   border-radius: 2px;
   background: white;
   animation: mouse-wheel 2.5s cubic-bezier(0.77, 0, 0.175, 1) infinite;
@@ -88,33 +57,18 @@ body {
 
 @keyframes mouse-wheel {
   0% {
-    transform: translateY(0);
-    opacity: 0;
-  }
-  10% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  30% {
-    transform: translateY(0);
-    height: 4px;
-  }
-  50% {
-    transform: translateY(0);
-    height: 20px;
-  }
-  70% {
-    transform: translateY(15px);
-    height: 4px;
-    opacity: 1;
-  }
-  90% {
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(15px);
-    opacity: 0;
-  }
+        opacity: 0;
+    }
+    40% {
+        opacity: 1;
+    }
+    80% {
+        transform: translate(-50%, -50%) translate(0, 20px);
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 
