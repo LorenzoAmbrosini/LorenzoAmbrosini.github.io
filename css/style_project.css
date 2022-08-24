@@ -113,7 +113,7 @@ img {
   /* font-family: 'Playfair Display', serif; */
   /* font-family: 'Abril Fatface', cursive; */
   font-family: 'Roboto Mono', monospace;
-  font-size: 14px;
+  font-size: 16px;
   color: white;
   /* -webkit-backdrop-filter: blur(5px) saturate(1.8); */
   /* backdrop-filter: blur(5px) saturate(1.8); */
@@ -377,7 +377,11 @@ a:link {
   .w-1, .w-2, .w-3, .w-4, .w-5, .w-6 {
     grid-column: span 1;
   }
-  
+
+
+  font-size: 16px;
+  }
+
   .footer{
     position: relative;
     grid-template-columns: repeat(1, 1fr);
