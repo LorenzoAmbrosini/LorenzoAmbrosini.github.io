@@ -254,7 +254,6 @@ img {
   font-size: 16px;
   font-family: 'Roboto Mono', monospace;
   font-weight: 300;
-
   color: white;
   text-align: center;
   position: absolute;
@@ -286,12 +285,90 @@ a:link {
   color: white;
 }
 
-@media screen and (max-width: 1500px) {
-
-
-}
-
 @media screen and (max-width: 500px) {
+
+
+
+  .nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    margin: 10px;
+    padding: 0px;
+  }
+
+  .nav li {
+    order: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    padding: 10px;
+    float: left;
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Roboto Mono', monospace;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 300;
+    letter-spacing: .1em;
+  }
+
+  .nav ul li:first-child{
+    order: 2;
+    width: 5%;
+  }
+
+  .nav ul li:nth-child(2){
+    order: 1;
+    width: 100%;
+  }
+
+  .nav ul li:nth-child(3){
+    order: 3;
+    width: 5%;
+  }
+
+  .nav img {
+    width: 30%;
+  }
+
+  .nav a {
+    display: inline-block;
+    position: relative;
+  }
+
+  .nav a:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform 0.35s ease-out;
+  }
+
+  .nav a:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+
 
   .container {
     grid-template-columns: repeat(1, 1fr);
@@ -300,17 +377,29 @@ a:link {
   .w-1, .w-2, .w-3, .w-4, .w-5, .w-6 {
     grid-column: span 1;
   }
-
-  .extra-item {
-    display: none;
-  }
-
-  .footer {
+  
+  .footer{
     position: relative;
+    grid-template-columns: repeat(1, 1fr);
+    background: linear-gradient(-30deg, #59E6EE, #FA7A75);
   }
 
-  .text {
-    font-size: 32px;
-    padding: 32px 16px;
+  .footer .color{
+    background-color: white;
+  }
+
+  .footer .color .text{
+    background: -webkit-linear-gradient(180deg, #59E6EE, #FA7A75);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .footer .white:hover{
+    background: transparent;
+  }
+
+  .footer .white:hover .text{
+  color: white;
+  -webkit-text-fill-color: white;
   }
 }
