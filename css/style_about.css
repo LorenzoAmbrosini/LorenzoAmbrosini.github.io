@@ -22,7 +22,7 @@ img {
 
 .logo {
   /* display: block; */
-  width: 75%;
+  width: 60%;
 }
 
 .nav {
@@ -48,7 +48,7 @@ img {
   align-items: center;
   justify-content: center;
   list-style-type: none;
-  padding: 30px 40px 30px 40px;
+  padding: 20px 40px 20px 40px;
   float: left;
   width: 150px;
   margin-left: auto;
