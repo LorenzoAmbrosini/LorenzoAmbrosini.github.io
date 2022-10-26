@@ -56,7 +56,11 @@
     opacity: 1;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px), (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+
+  * { cursor: default;
+  }
+
   .cursor, .cursor2 {
     display: none;
   }

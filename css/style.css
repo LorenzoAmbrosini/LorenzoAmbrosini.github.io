@@ -87,6 +87,10 @@ div ::selection {
   outline: 2px solid white;
 }
 
+.indicator {
+  height: 100%;
+}
+
 .indicator .text {
   font-size: 14px;
   font-family: 'Roboto Mono', monospace;
@@ -95,14 +99,14 @@ div ::selection {
   text-align: center;
   position: relative;
   width: 100%;
-  top: 200px;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
 .mouse {
   position: relative;
-  top: 180px;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 28px;
@@ -449,19 +453,25 @@ a:link {
   }
 
   .container {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 30vw 20vw;
   }
 
   .w-1, .w-2, .w-3, .w-4, .w-5, .w-6 {
-    grid-column: span 1;
+    grid-column: span 3;
   }
 
   .welcome {
-    font-size: 18px;
+    font-size: 2.8vw;
+    line-height: 5vw;
+  }
+
+  #welcome {
+    grid-column: span 2;
   }
 
   #scrollbox {
-    display: none;
+    grid-column: span 1;
   }
 
   .footer {
@@ -507,6 +517,10 @@ a:link {
 
   .logo {
     width: 100%;
+  }
+
+  #scrollbox {
+    display: none;
   }
 
   .fake_box {
