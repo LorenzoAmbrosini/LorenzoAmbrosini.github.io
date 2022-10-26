@@ -1,0 +1,44 @@
+* {
+  cursor: none;
+}
+
+body {
+  background-color: green;
+}
+
+.cursor {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  border: 2px solid white;
+  transition: height 200ms ease-out,  width 200ms ease-out, transform 50ms ease-out;
+  position: fixed;
+  pointer-events: none;
+  left: 0;
+  top: 0;
+}
+
+.cursor2 {
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  background-color: white;
+  mix-blend-mode: difference;
+  opacity: 1;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: width .3s, height .3s, opacity .3s;
+}
+
+.hover {
+  width: 30px;
+  height: 30px;
+  opacity: 0.5;
+}
+
+.cursorhover {
+  width: 40px;
+  height: 40px;
+  opacity: 1;
+}
