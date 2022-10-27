@@ -474,6 +474,22 @@ a:link {
     grid-column: span 1;
   }
 
+  .fog {
+    width: 40%;
+    top: 40%;
+    left: 70%;
+  }
+  
+  .designer {
+    width: 100%;
+    top: 35%;
+    left: 50%;
+  }
+
+  .designer img {
+    margin: auto;
+  }
+
   .footer {
     grid-template-columns: repeat(2, 1fr);
     width: 100%;
@@ -523,8 +539,35 @@ a:link {
     display: none;
   }
 
+  .fog {
+    width: 60%;
+    top: 70%;
+    left: 60%;
+  }
+  
+  .designer {
+    top: 70%;
+  }
+
   .fake_box {
     display: none;
+  }
+
+  .container {
+    grid-template-rows: 50vw 80vw;
+  }
+
+  .w-1, .w-2, .w-3, .w-4, .w-5, .w-6 {
+    grid-column: span 3;
+  }
+
+  #welcome {
+    grid-column: span 3;
+  }
+
+  .welcome {
+    font-size: 5.5vw;
+    line-height: 10vw;
   }
 
   .footer {
