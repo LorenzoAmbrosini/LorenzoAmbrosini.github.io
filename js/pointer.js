@@ -6,7 +6,7 @@ var a = document.querySelectorAll('a');
 document.addEventListener('mousemove', function(e){
   var x = e.clientX;
   var y = e.clientY;
-  cursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)` 
+  cursor.style.transform = `translate3d(${e.clientX - 17}px, ${e.clientY -17}px, 0)`;
 });
 
 document.addEventListener('mousemove', function(e){

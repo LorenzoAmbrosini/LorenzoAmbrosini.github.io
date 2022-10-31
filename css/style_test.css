@@ -1,44 +1,29 @@
-* {
-  cursor: none;
+#cursor {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 50%;
+  left: 50%;
+  border-radius: 100%;
+  background: var(--purple);
+  pointer-events: none;
+  mix-blend-mode: difference;
+  z-index: 9;
+  transition: transform .5s;
 }
-
-body {
-  background-color: green;
+#cursor.hovered {
+  background: var(--purple);
+  transform: scale(6.2);
 }
-
-.cursor {
+#circle {
+  position: absolute;
+  pointer-events: none;
   width: 50px;
   height: 50px;
-  border-radius: 100%;
-  border: 2px solid white;
-  transition: height 200ms ease-out,  width 200ms ease-out, transform 50ms ease-out;
-  position: fixed;
-  pointer-events: none;
-  left: 0;
-  top: 0;
-}
-
-.cursor2 {
-  width: 15px;
-  height: 15px;
-  border-radius: 100%;
-  background-color: white;
-  mix-blend-mode: difference;
-  opacity: 1;
-  position: fixed;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  transition: width .3s, height .3s, opacity .3s;
-}
-
-.hover {
-  width: 30px;
-  height: 30px;
-  opacity: 0.5;
-}
-
-.cursorhover {
-  width: 40px;
-  height: 40px;
-  opacity: 1;
+  top: calc(50% - 25px);
+  left: calc(50% - 25px);
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, .5);
+  transition: all .2s cubic-bezier(0, 0.5, 1, 1);
+  z-index: 0;
 }

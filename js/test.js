@@ -1,37 +1,26 @@
-// UPDATE: I was able to get this working again... Enjoy!
-
-var cursor = document.querySelector('.cursor');
-var cursorinner = document.querySelector('.cursor2');
-var a = document.querySelectorAll('a');
-
-document.addEventListener('mousemove', function(e){
-  var x = e.clientX;
-  var y = e.clientY;
-  cursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)` 
-});
-
-document.addEventListener('mousemove', function(e){
-  var x = e.clientX;
-  var y = e.clientY;
-  cursorinner.style.left = x + 'px';
-  cursorinner.style.top = y + 'px';
-});
-
-document.addEventListener('mousedown', function(){
-  cursor.classList.add('click');
-  cursorinner.classList.add('cursorhover')
-});
-
-document.addEventListener('mouseup', function(){
-  cursor.classList.remove('click')
-  cursorinner.classList.remove('cursorhover')
-});
-
-a.forEach(item => {
-  item.addEventListener('mouseover', () => {
-    cursor.classList.add('hover');
-  });
-  item.addEventListener('mouseleave', () => {
-    cursor.classList.remove('hover');
-  });
-})
+var a_link = document.querySelectorAll(".a-link");
+// Handle mouse over/out event on links
+a_link.forEach(e => e.addEventListener('mouseenter', handleMouseEnter));
+a_link.forEach(e => e.addEventListener('mouseleave', handleMouseLeave));
+window.addEventListener('mousemove', handleMouseMove);
+// Move the cursor in dom/window
+function handleMouseMove(event) {
+  var cursor_top = event.pageY - (cursor.clientHeight / 2);
+  var cursor_left = event.pageX - (cursor.clientWidth / 2);
+  var circle_top = event.pageY - (circle.clientHeight / 2);
+  var circle_left = event.pageX - (circle.clientWidth / 2);
+  cursor.style.top = cursor_top + 2 + 'px';
+  cursor.style.left = cursor_left + 2 + 'px';
+  circle.style.top = circle_top + 'px';
+  circle.style.left = circle_left + 'px';
+}
+// event: mouse enter on link
+function handleMouseEnter() {
+  cursor.classList.add('hovered');
+  circle.classList.add('hovered');
+}
+// event: mouse leave on link
+function handleMouseLeave() {
+  cursor.classList.remove('hovered');
+  circle.classList.remove('hovered');
+}
