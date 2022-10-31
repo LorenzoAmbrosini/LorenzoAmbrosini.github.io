@@ -1,3 +1,7 @@
+* {
+  cursor: none;
+}
+
 #cursor {
   position: absolute;
   width: 10px;
@@ -5,14 +9,15 @@
   top: 50%;
   left: 50%;
   border-radius: 100%;
-  background: var(--purple);
+  background: white;
   pointer-events: none;
   mix-blend-mode: difference;
   z-index: 9;
   transition: transform .5s;
 }
 #cursor.hovered {
-  background: var(--purple);
+  background: #fd9b97;
+  mix-blend-mode: multiply;
   transform: scale(6.2);
 }
 #circle {
@@ -25,5 +30,5 @@
   border-radius: 50%;
   border: 2px solid rgba(255, 255, 255, .5);
   transition: all .2s cubic-bezier(0, 0.5, 1, 1);
-  z-index: 0;
+  z-index: 10;
 }

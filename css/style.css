@@ -160,6 +160,7 @@ div ::selection {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  z-index: 0;
 }
 
 .gallery-item .image img {
@@ -176,13 +177,13 @@ div ::selection {
   mix-blend-mode: multiply;
 }
 
-.gallery-item:hover .image img {
+.gallery-item .text:hover + .image img{
   filter: grayscale(0%);
   opacity: 1;
   mix-blend-mode: normal;
 }
 
-.gallery-item .image #inequality{
+#inequality .gallery-item .image img{
   width: 180%;
 }
 
@@ -196,9 +197,9 @@ div ::selection {
   font-size: 22px;
   text-align: center;
   color: white;
-  pointer-events: none;
   transform: translate(-50%, -50%);
   transition: ease-in-out 0.35s;
+  z-index: 1;
 }
 
 .gallery-item .text div {
@@ -217,11 +218,11 @@ div ::selection {
   z-index: -10;
 }
 
-.gallery-item:hover .text div:after {
+.gallery-item .text:hover div:after {
   width: 100%;
 }
 
-.gallery-item:hover .text div {
+.gallery-item .text div:hover {
   /* background: -webkit-linear-gradient(90deg, #FA7A75, #59E6EE);
   background-clip: text;
   -webkit-background-clip: text; */
