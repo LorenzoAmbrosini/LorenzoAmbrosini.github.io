@@ -1,8 +1,4 @@
-* {
-    cursor: none;
-  }
-  
-  #cursor {
+#cursor {
     position: absolute;
     width: 10px;
     height: 10px;
@@ -11,24 +7,43 @@
     border-radius: 100%;
     background: white;
     pointer-events: none;
-    mix-blend-mode: difference;
-    z-index: 9;
-    transition: transform .5s;
-  }
-  #cursor.hovered {
-    background: #fd9b97;
     mix-blend-mode: multiply;
-    transform: scale(6.2);
-  }
-  #circle {
+    opacity: 1;
+    z-index: 9;
+    transition: opacity .5s, background .5s, transform .5s;
+}
+#cursor.hovered {
+    opacity: .5;
+    background: #fd9b97;
+    transform: scale(4);
+}
+
+#circle {
     position: absolute;
     pointer-events: none;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     top: calc(50% - 25px);
     left: calc(50% - 25px);
     border-radius: 50%;
-    border: 2px solid rgba(255, 255, 255, .5);
-    transition: all .2s cubic-bezier(0, 0.5, 1, 1);
-    z-index: 10;
-  }
+    border: 2px solid white;
+    /* transition: all 0.2s cubic-bezier(0, 0.5, 1, 1); */
+    transition: all 0.2s ease-out;
+    z-index: 9;
+}
+
+#circle.hovered {
+    transform: scale(.75);
+}
+
+* {
+    cursor: none;
+}
+
+.normal {
+    cursor: auto;
+}
+
+.nope {
+    display: none;
+}
