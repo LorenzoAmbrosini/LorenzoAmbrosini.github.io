@@ -278,7 +278,7 @@ div ::selection {
   z-index: 3;
 }
 
-.date {
+#date {
   display: inline-block;
 }
 

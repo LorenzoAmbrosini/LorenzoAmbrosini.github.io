@@ -32,24 +32,11 @@ function handleMouseLeave() {
   circle.classList.remove('hovered');
 }
 
-const dateElement = document.querySelector(".date");
-
-function formatDate(date) {
-  const DAYS = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday"
-  ];
-
-  return `${DAYS[date.getDay()]}`;
-}
-
-setInterval(() => {
-  const now = new Date();
-
-  dateElement.textContent = formatDate(now);
-}, 200);
+$(".white-background-cursor").hover(function(){
+  $(cursor).addClass("whitebg");
+  $(circle).addClass("whitebg2");
+}, 
+function(){ 
+  $(cursor).removeClass("whitebg");
+  $(circle).removeClass("whitebg2");
+});

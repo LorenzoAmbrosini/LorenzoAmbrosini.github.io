@@ -7,13 +7,14 @@
     border-radius: 100%;
     background: white;
     pointer-events: none;
-    mix-blend-mode: multiply;
     opacity: 1;
     z-index: 9;
-    transition: opacity .5s, background .5s, transform .5s;
+    mix-blend-mode: normal;
+    transition: opacity .5s, background .5s, transform .5s, mix-blend-mode 5s;
 }
 #cursor.hovered {
     opacity: .5;
+    mix-blend-mode: multiply;
     background: #fd9b97;
     transform: scale(4);
 }
@@ -27,8 +28,8 @@
     left: calc(50% - 25px);
     border-radius: 50%;
     border: 2px solid white;
-    /* transition: all 0.2s cubic-bezier(0, 0.5, 1, 1); */
-    transition: all 0.2s ease-out;
+    transition: all 0.2s cubic-bezier(0, 0.5, 1, 1);
+    /* transition: all 0.2s ease-out; */
     z-index: 9;
 }
 

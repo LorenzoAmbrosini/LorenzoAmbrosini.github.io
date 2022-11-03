@@ -1,68 +1,70 @@
+#cursor {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 50%;
+    left: 50%;
+    border-radius: 100%;
+    background: white;
+    pointer-events: none;
+    opacity: 1;
+    z-index: 9;
+    mix-blend-mode: normal;
+    transition: opacity .5s, background .5s, transform .5s, mix-blend-mode 5s;
+}
+#cursor.hovered {
+    opacity: .5;
+    mix-blend-mode: multiply;
+    background: #fd9b97;
+    transform: scale(4);
+}
+
+#circle {
+    position: absolute;
+    pointer-events: none;
+    width: 40px;
+    height: 40px;
+    top: calc(50% - 25px);
+    left: calc(50% - 25px);
+    border-radius: 50%;
+    border: 2px solid white;
+    transition: all 0.2s cubic-bezier(0, 0.5, 1, 1);
+    /* transition: all 0.2s ease-out; */
+    z-index: 9;
+}
+
+#circle.hovered {
+    transform: scale(.75);
+}
+
+#cursor.whitebg {
+    background-color: #98e1e5;
+    mix-blend-mode: multiply;
+    opacity: 1;
+}
+
+#circle.whitebg2 {
+    border: 2px solid #bbfcff;
+}
+
 * {
     cursor: none;
 }
 
-.cursor {
-    width: 30px;
-    height: 30px;
-    border-radius: 100%;
-    border: 2px solid white;
-    transition: height 0.3s ease-out, width 0.3s ease-out, border 0.3s ease-out, transform 80ms ease-out;
-    position: fixed;
-    pointer-events: none;
-    left: 0;
-    top: 0;
-    z-index: 100;
+.normal {
+    cursor: auto;
 }
 
-.cursor2 {
-    width: 10px;
-    height: 10px;
-    border-radius: 100%;
-    mix-blend-mode: difference;
-    background-color: white;
-    opacity: 1;
-    position: fixed;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-    transition: width 0.3s, height 0.3s, opacity 0.3s;
-    z-index: 100;
+.nope {
+    display: none;
 }
-
-.cursorhover {
-    border: 2px solid #fd9b97;
-    width: 20px;
-    height: 20px;
-}
-
-.cursorclick2 {
-    width: 20px;
-    height: 20px;
-}
-
-.cursorhover2 {
-    background-color: #fd9b97;
-    opacity: 1;
-    mix-blend-mode: multiply;
-}
-
-.whitebg {
-    border: 2px solid #bbfcff;
-}
-
-.whitebg2 {
-    background-color: #bbfcff;
-    mix-blend-mode: multiply;
-    opacity: 1;
-}
-
 
 @media (hover: none){    
 
   * { cursor: default;
   }
 
-  .cursor, .cursor2 {
+  .cursor, .circle {
     display: none;
   }
   
