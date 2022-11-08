@@ -40,3 +40,15 @@ function(){
   $(cursor).removeClass("whitebg");
   $(circle).removeClass("whitebg2");
 });
+
+$("iframe").hover(function(){
+
+  $("*").addClass("normal");
+  $(circle).addClass("nope");
+  $(cursor).addClass("nope");
+}, 
+function(){ 
+  $("*").removeClass("normal");
+  $(circle).removeClass("nope");
+  $(cursor).removeClass("nope");
+});
