@@ -59,9 +59,9 @@
     display: none;
 }
 
-@media (hover: none){    
+@media (hover: none) and (pointer: coarse){    
 
-  * { cursor: default;
+  * { cursor: none;
   }
 
   .cursor, .circle {

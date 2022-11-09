@@ -482,7 +482,7 @@ a:link {
 
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 428px) {
   /* mobile */
 
   .nav ul {
@@ -515,12 +515,6 @@ a:link {
     width: 100%;
   }
 
-  /* .container {
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: 40vw 25vw 10vw 10vw 25vw 50vw 50vw 60vw 60vw;
-    grid-auto-rows: 25vw;
-  } */
-
   .container {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: none;
@@ -549,7 +543,7 @@ a:link {
 
   .solution {
     grid-row: span 1;
-    height: 160vw;
+    height: 170vw;
   }
 
   .description .text {
