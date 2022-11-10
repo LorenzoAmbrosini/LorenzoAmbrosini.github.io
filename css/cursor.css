@@ -1,3 +1,9 @@
+input {
+    cursor: inherit;
+  }
+
+@media (hover: hover) and (pointer: fine) { 
+    
 #cursor {
     position: absolute;
     width: 10px;
@@ -47,7 +53,7 @@
     border: 2px solid #bbfcff;
 }
 
-* {
+body {
     cursor: none;
 }
 
@@ -59,9 +65,12 @@
     display: none;
 }
 
-@media (hover: none) and (pointer: coarse){    
+}
 
-  * { cursor: none;
+@media (hover: none), (pointer: none){    
+
+  * { 
+    cursor: none;
   }
 
   .cursor, .circle {

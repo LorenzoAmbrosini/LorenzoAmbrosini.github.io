@@ -1,7 +1,7 @@
 var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 
 if (isSafari) {
-    $("*").addClass('normal');
+    $("body").addClass('normal');
     $("#cursor, #circle").addClass('nope');
 } 
 
