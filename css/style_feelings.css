@@ -140,6 +140,12 @@ div ::selection {
   text-decoration: underline;
 }
 
+.description .text h3 {
+  margin: 0;
+  font-size: inherit;
+  font-family: 'Roboto Mono', monospace;
+}
+
 .gallery-item .cover_image {
   width: 100%;
   height: 100%;
@@ -171,6 +177,23 @@ div ::selection {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+#numbers .gallery-item .image img {
+  width: 85%;
+  height: auto;
+}
+
+#explanation .gallery-item .image img {
+  width: 100%;
+  height: auto;
+  top: 65%;
+}
+
+#legend .gallery-item .image img {
+  width: auto;
+  height: 120%;
+  left: 70%;
 }
 
 .w-1 {
@@ -342,7 +365,7 @@ a:link {
   }
 
   .container {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     /* grid-template-rows: 15vw 20vw 10vw 10vw 20vw 10vw 10vw 10vw 15vw;
     grid-auto-rows: 25vw; */
     grid-template-rows: none;
@@ -355,7 +378,7 @@ a:link {
   .w-4,
   .w-5,
   .w-6 {
-    grid-column: span 3;
+    grid-column: span 2;
   }
 
   .cover {
@@ -370,11 +393,21 @@ a:link {
 
   .solution {
     grid-row: span 1;
-    height: 40vw;
+    height: 50vw;
   }
 
   .image-row {
     grid-column: span 1;
+  }
+
+  #explanation ,
+  #legend  {
+    grid-row: span 1;
+    height: 60vw;
+  }
+
+  #circles {
+    grid-column: span 2;
   }
 
   .title .text {
@@ -386,7 +419,27 @@ a:link {
   }
 
   .gallery-item .cover_image img {
-    width: 140%;
+    width: 110%;
+  }
+
+  #explanation .gallery-item .image img {
+    width: 120%;
+    height: auto;
+    left: 50%;
+    top: 60%;
+  }
+
+  #legend .gallery-item .image img {
+    width: 110%;
+    height: auto;
+    left: 55%;
+  }
+
+  #circles .gallery-item .image img {
+    width: 100%;
+    height: auto;
+    left: 50%;
+    top: 38%;
   }
 
   .description {
@@ -497,17 +550,47 @@ a:link {
   }
 
   .brief {
-    height: 70vw;
+    height: 50vw;
   }
 
   .solution {
     grid-row: span 1;
-    height: 155vw;
+    height: 200vw;
   }
 
   .image-row {
     grid-row: span 1;
-    height: 60vw;
+    height: 80vw;
+  }
+
+  #explanation,
+  #legend {
+    height: 110vw;
+  }
+
+  #circles {
+    grid-column: span 1;
+  }
+
+  #explanation .gallery-item .image img {
+    width: 100%;
+    height: auto;
+    left: 50%;
+    top: 60%;
+  }
+
+  #legend .gallery-item .image img {
+    width: 100%;
+    height: auto;
+    left: 50%;
+    top: 45%;
+  }
+
+  #circles .gallery-item .image img {
+    width: auto;
+    height: 130%;
+    left: 50%;
+    top: 50%;
   }
 
   .description .text {
@@ -519,7 +602,7 @@ a:link {
 
   .gallery-item .image img {
     width: auto;
-    height: 90%;
+    height: 100%;
   }
 
   /* adapt to project */
