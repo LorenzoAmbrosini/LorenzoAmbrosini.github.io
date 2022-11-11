@@ -2,6 +2,10 @@ input {
     cursor: inherit;
   }
 
+a:-webkit-any-link {
+    cursor: none;
+}  
+
 @media (hover: hover) and (pointer: fine) { 
     
 #cursor {

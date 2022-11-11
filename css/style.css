@@ -191,7 +191,21 @@ div ::selection {
   width: 300%;
 }
 
+#databricks .gallery-item .image img{
+  width: 150%;
+  height: auto;
+  top: 60%;
+  left: 40%;
+}
+
+#feelings .gallery-item .image img{
+  width: 150%;
+  height: auto;
+  left: 70%;
+}
+
 .gallery-item .text {
+  white-space: nowrap;
   width: auto;
   position: absolute;
   display: inline-block;
