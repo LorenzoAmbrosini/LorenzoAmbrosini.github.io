@@ -2,7 +2,7 @@ input {
     cursor: inherit;
   }
 
-a:-webkit-any-link {
+a {
     cursor: none;
 }  
 
@@ -63,6 +63,10 @@ body {
 
 .normal {
     cursor: auto;
+}
+
+a .normal {
+    cursor: pointer;
 }
 
 .nope {

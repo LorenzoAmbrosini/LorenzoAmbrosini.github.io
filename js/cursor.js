@@ -2,6 +2,7 @@ var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 
 if (isSafari) {
     $("body").addClass('normal');
+    $("a:-webkit-any-link").addClass('normal');
     $("#cursor, #circle").addClass('nope');
 } 
 
