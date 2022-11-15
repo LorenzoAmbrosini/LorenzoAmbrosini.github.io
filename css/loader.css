@@ -1,6 +1,8 @@
 #preloader {
+  display: block;
   background: linear-gradient(-60deg, #59E6EE, #FA7A75);
   animation: gradient 10s ease infinite alternate;
+  transition: display 1s ease-out;
   background-size: 200% 200%;
   height: 100vh;
   width: 100%;
