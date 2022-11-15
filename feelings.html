@@ -6,6 +6,7 @@
     <title>Loram Ipsum</title>
     <link rel="icon" type="image/png" href="imgs/logo_favicon.png" />
     <link rel="stylesheet" href="css/style_feelings.css">
+    <link rel="stylesheet" href="css/loader.css">
     <link rel="stylesheet" href="css/cursor.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin">
@@ -15,9 +16,24 @@
         rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="js/cursor.js" defer="defer"></script>
+    <script src="js/loader.js" defer="defer"></script>
+
 </head>
 
     <body>
+
+        <div id="preloader">
+            <div class="preloader_container">
+                <div class="content text">
+                    hold on a sec
+                </div>
+                <div class="content">
+                    <span id="dot1">.</span>
+                    <span id="dot2">.</span>
+                    <span id="dot3">.</span>
+                </div>
+            </div>
+        </div>  
 
         <div class="nav">
             <ul>
