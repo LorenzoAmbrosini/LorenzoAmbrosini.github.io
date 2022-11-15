@@ -348,7 +348,7 @@ a:link {
   }
 
   .container {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     /* grid-template-rows: 15vw 20vw 10vw 10vw 20vw 10vw 10vw 10vw 15vw;
     grid-auto-rows: 25vw; */
     grid-template-rows: none;
@@ -361,7 +361,7 @@ a:link {
   .w-4,
   .w-5,
   .w-6 {
-    grid-column: span 3;
+    grid-column: span 4;
   }
 
   .cover {
@@ -375,7 +375,13 @@ a:link {
   }
 
   .image-row {
-    grid-column: span 1;
+    grid-column: span 2;
+  }
+
+  #spaceship {
+    grid-column: span 4;
+    grid-row: span 1;
+    height: 60vw;
   }
 
   .title .text {
@@ -403,6 +409,12 @@ a:link {
     hyphens: none;
     padding: 30px;
   }
+
+  .gallery-item .image img {
+    width: auto;
+    height: 100%;
+  }
+  
 
   
   /* adapt to project */
@@ -506,6 +518,10 @@ a:link {
     grid-row: span 1;
     height: 60vw;
   }
+
+  #spaceship {
+    grid-column: span 1;
+  } 
 
   .description .text {
     font-size: 4.8vw;

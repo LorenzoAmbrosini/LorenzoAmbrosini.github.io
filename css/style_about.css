@@ -194,9 +194,8 @@ body {
 }
 
 .about-paragraph a {
-    border-bottom: 1px solid white;
-    padding-bottom: 2px;
-}
+    text-decoration: underline;
+  }
 
 .about-paragraph .gif-image {
     position: fixed;
@@ -477,6 +476,16 @@ a:link {
         font-size: 2vw;
     }
 
+    .about-paragraph a {
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    #databricks {
+        text-decoration: underline;
+        font-weight: 300;
+    }    
+
     .dwight {
       width: 50%;
       top: 30%;
@@ -572,7 +581,8 @@ a:link {
     }
 
     .bio {
-      height: auto;
+      grid-row: span 1;
+      height: 145vw;
     }
 
     .education {
@@ -582,11 +592,11 @@ a:link {
 
     .experience {
       grid-row: span 1;
-      height: 170vw;
+      height: 180vw;
     }
 
     .funfacts {
-      height: 230vw;
+      height: 250vw;
     }
 
     .bio,
@@ -612,11 +622,11 @@ a:link {
     }
 
     .text {
-        font-size: 3.5vw;
+        font-size: 3.8vw;
     }
 
     .bio_content .text {
-        margin: 9vw;
+        margin: 7vw;
     }
 
     .bio_content .text h1 {

@@ -185,15 +185,14 @@ div ::selection {
 }
 
 #explanation .gallery-item .image img {
-  width: 100%;
+  width: 120%;
   height: auto;
-  top: 65%;
 }
 
 #legend .gallery-item .image img {
   width: auto;
-  height: 120%;
-  left: 70%;
+  height: 110%;
+  left: 80%;
 }
 
 .w-1 {
@@ -401,7 +400,8 @@ a:link {
   }
 
   #explanation ,
-  #legend  {
+  #legend,
+  #circles  {
     grid-row: span 1;
     height: 60vw;
   }
@@ -425,21 +425,17 @@ a:link {
   #explanation .gallery-item .image img {
     width: 120%;
     height: auto;
-    left: 50%;
-    top: 60%;
   }
 
   #legend .gallery-item .image img {
-    width: 110%;
-    height: auto;
-    left: 55%;
+    width: auto;
+    height: 100%;
+    left: 60%;
   }
 
   #circles .gallery-item .image img {
     width: 100%;
     height: auto;
-    left: 50%;
-    top: 38%;
   }
 
   .description {
@@ -564,7 +560,8 @@ a:link {
   }
 
   #explanation,
-  #legend {
+  #legend,
+  #circles {
     height: 110vw;
   }
 
@@ -573,23 +570,23 @@ a:link {
   }
 
   #explanation .gallery-item .image img {
-    width: 100%;
-    height: auto;
-    left: 50%;
-    top: 60%;
+    width: auto;
+    height: 120%;
+    left: 55%;
+    top: 55%;
   }
 
   #legend .gallery-item .image img {
-    width: 100%;
-    height: auto;
+    height: 100%;
+    width: auto;
     left: 50%;
-    top: 45%;
+    top: 50%;
   }
 
   #circles .gallery-item .image img {
     width: auto;
-    height: 130%;
-    left: 50%;
+    height: 100%;
+    left: 55%;
     top: 50%;
   }
 

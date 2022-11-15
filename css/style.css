@@ -255,8 +255,7 @@ div ::selection {
 }
 
 .welcome a {
-  border-bottom: 1px solid white;
-  padding-bottom: 2px;
+  text-decoration: underline;
 }
 
 .welcome .gif-image {
@@ -478,6 +477,10 @@ a:link {
     line-height: 5vw;
   }
 
+  .welcome a {
+    text-decoration: none;
+  }
+
   #welcome {
     grid-column: span 2;
   }
@@ -553,6 +556,7 @@ a:link {
 
   .gallery-item .text {
     white-space: normal;
+    width: 80%;
   }
 
   #inequality .gallery-item .image img,

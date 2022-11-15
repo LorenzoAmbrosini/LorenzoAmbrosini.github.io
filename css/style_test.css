@@ -1,50 +1,128 @@
-#cursor {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    top: 50%;
-    left: 50%;
-    border-radius: 100%;
-    background: white;
-    pointer-events: none;
+#preloader {
+  background: linear-gradient(-60deg, #59E6EE, #FA7A75);
+  animation: gradient 10s ease infinite alternate;
+  background-size: 200% 200%;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  background-blend-mode: multiply;
+  background-attachment: fixed;
+  font-family: "Roboto Mono", monospace;
+}
+
+@keyframes gradient {
+    0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.preloader_container {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  flex-direction: column;
+  align-items: center;
+}
+
+.content {
+  color: white;
+  font-size: 2em;
+  display: flex;
+}
+
+.text {
+    font-size: 1.5em;
+}
+
+#dot1,
+#dot2,
+#dot3 {
+  opacity: 0;
+}
+
+#dot1 {
+  animation: dotappear1 1s infinite;
+}
+
+@keyframes dotappear1 {
+  0% {
+    opacity: 0;
+  }
+
+  25% {
     opacity: 1;
-    z-index: 9;
-    mix-blend-mode: normal;
-    transition: opacity .5s, background .5s, transform .5s, mix-blend-mode 5s;
-}
-#cursor.hovered {
-    opacity: .5;
-    mix-blend-mode: multiply;
-    background: #fd9b97;
-    transform: scale(4);
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }
 
-#circle {
-    position: absolute;
-    pointer-events: none;
-    width: 40px;
-    height: 40px;
-    top: calc(50% - 25px);
-    left: calc(50% - 25px);
-    border-radius: 50%;
-    border: 2px solid white;
-    transition: all 0.2s cubic-bezier(0, 0.5, 1, 1);
-    /* transition: all 0.2s ease-out; */
-    z-index: 9;
+#dot2 {
+  animation: dotappear2 1s infinite;
 }
 
-#circle.hovered {
-    transform: scale(.75);
+@keyframes dotappear2 {
+  0% {
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }
 
-* {
-    cursor: none;
-}
-
-.normal {
-    cursor: auto;
-}
-
-.nope {
-    display: none;
-}
+#dot3 {
+    animation: dotappear3 1s infinite;
+  }
+  
+  @keyframes dotappear3 {
+    0% {
+      opacity: 0;
+    }
+  
+    25% {
+      opacity: 0;
+    }
+  
+    50% {
+      opacity: 0;
+    }
+  
+    75% {
+      opacity: 1;
+    }
+  
+    100% {
+      opacity: 0;
+    }
+  }
