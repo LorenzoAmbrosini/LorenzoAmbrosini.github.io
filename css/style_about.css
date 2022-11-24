@@ -56,7 +56,7 @@ body {
 .container {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: 20vw 20vw;
+  grid-template-rows: 20vw 15vw;
   grid-auto-rows: 14vw;
   grid-gap: 2px;
   grid-auto-flow: dense;
@@ -349,7 +349,7 @@ a:link {
   /*regular desktop*/
 
   .container {
-    grid-auto-rows: 18vw;
+    grid-auto-rows: 16vw;
   }
 
   .text {
