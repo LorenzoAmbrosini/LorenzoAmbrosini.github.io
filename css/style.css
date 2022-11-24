@@ -13,46 +13,25 @@ div ::selection {
   -webkit-text-fill-color: #fd9b97;
 }
 
-.logo {
-  width: 60%;
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  color: white;
+  font-size: 1.1em;
 }
 
-.mobile {
+.nav-item {
+  padding: 20px 30px 20px 30px;
+} 
+
+.avoid-break {
   display: none;
 }
 
-.nav {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.nav ul {
-  display: flex;
-  padding: 0;
-  margin: 0;
-  text-align: center;
-  margin: 0 auto;
-  padding: 0px;
-}
-
-.nav li {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  list-style-type: none;
-  padding: 20px 40px 20px 40px;
-  float: left;
-  width: 150px;
-  margin-left: auto;
-  margin-right: auto;
-  font-style: normal;
-  font-variant: normal;
-  font-size: 1vw;
-  font-weight: 300;
-  letter-spacing: .1em;
+#menu {
+  text-align: right;
 }
 
 .nav a {
@@ -79,12 +58,17 @@ div ::selection {
 }
 
 .container {
+  margin: 0px 30px 30px 30px;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-auto-rows: 300px 100px;
+  grid-auto-rows: 80px;
   grid-gap: 2px;
   grid-auto-flow: dense;
   outline: 2px solid white;
+}
+
+#scrollbox {
+  display: none;
 }
 
 .indicator {
@@ -195,8 +179,16 @@ div ::selection {
   width: 150%;
 }
 
+#scuse .gallery-item .image img{
+  width: 170%;
+}
+
+#mafia .gallery-item .image img{
+  width: 400%;
+}
+
 .gallery-item .text {
-  white-space: nowrap;
+  /* white-space: nowrap; */
   width: auto;
   position: absolute;
   display: inline-block;
@@ -425,10 +417,6 @@ a:link {
 }
 
 @media screen and (max-width: 1440px) { /*regular desktop*/
-  .nav li{
-    font-size: 1.3vw;
-  }
-
   .welcome {
     font-size: 1.3vw;
     line-height: 3vw;
@@ -439,54 +427,57 @@ a:link {
   }
 }
 
+@media screen and (max-width: 1024px) { /*small desktop*/
+  
+  .welcome {
+    font-size: 1.8vw;
+    line-height: 3.5vw;
+  }
+
+}
+
 @media screen and (max-width: 768px), (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) { /*tablet*/
   
-  .nav ul {
-    max-width: 100%
-  }
-
-  .nav li{
-    font-size: 2vw;
-  }
-
-  .nav ul li:first-child {
-    width: 40%;
-    justify-content: flex-end;
-  }
-
-  .nav ul li:nth-child(2) {
-    width: 20%;
-  }
-
-  .nav ul li:nth-child(3) {
-    width: 40%;
-    justify-content: flex-start;
+  .nav a {
+    text-decoration: underline;
   }
 
   .container {
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 30vw 20vw;
+    grid-auto-rows: 90px;
   }
 
-  .w-1, .w-2, .w-3, .w-4, .w-5, .w-6 {
+  .w-1 {
+    grid-column: span 1;
+  }
+  
+  .w-2 {
+    grid-column: span 1;
+  }
+  
+  .w-3 {
+    grid-column: span 2;
+  }
+  
+  .w-4 {
+    grid-column: span 3;
+  }
+  
+  .w-5 {
+    grid-column: span 3;
+  }
+  
+  .w-6 {
     grid-column: span 3;
   }
 
   .welcome {
-    font-size: 2.8vw;
+    font-size: 2.3vw;
     line-height: 5vw;
   }
 
   .welcome a {
     text-decoration: none;
-  }
-
-  #welcome {
-    grid-column: span 2;
-  }
-
-  #scrollbox {
-    grid-column: span 1;
   }
 
   .fog {
@@ -521,38 +512,17 @@ a:link {
 
 @media screen and (max-width: 428px) { /* mobile */
 
-  .nav ul {
-    margin: 10px;
+  .nav {
+    font-size: 1em;
   }
 
-  .nav li {
-    font-size: 4vw;
-    order: 2;
-    display: flex;
-    padding: 10px;
-  }
-  .nav ul li:first-child {
-    width: 40%;
-    justify-content: center;
+  .avoid-break {
+    display: block;
   }
 
-  .nav ul li:nth-child(2) {
-    width: 20%;
-    /* display: none; */
-  }
-
-  .nav ul li:nth-child(3) {
-    width: 40%;
-    justify-content: center;
-  }
-
-  .logo {
-    width: 100%;
-  }
-
-  #scrollbox {
-    display: none;
-  }
+  .nav-item {
+    padding: 20px 10px 20px 10px;
+  } 
 
   .gallery-item .text {
     white-space: normal;
@@ -584,19 +554,37 @@ a:link {
   }
 
   .container {
-    grid-template-rows: 50vw 80vw;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: minmax(20vw, auto);
+    margin: 0px 10px 20px 10px;
   }
 
-  .w-1, .w-2, .w-3, .w-4, .w-5, .w-6 {
-    grid-column: span 3;
+  .w-1,
+  .w-2,
+  .w-3,
+  .w-4,
+  .w-5,
+  .w-6 {
+    grid-column: span 1;
+  }
+
+  .h-1,
+  .h-2,
+  .h-3,
+  .h-4,
+  .h-5,
+  .h-6 {
+    grid-row: span 1;
+    height: 80vw;
   }
 
   #welcome {
-    grid-column: span 3;
+    grid-row: span 1;
+    height: 120vw;
   }
 
   .welcome {
-    font-size: 5.5vw;
+    font-size: 5vw;
     line-height: 10vw;
   }
 

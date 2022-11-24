@@ -13,47 +13,27 @@ div ::selection {
   -webkit-text-fill-color: #fd9b97;
 }
 
-.logo {
-  width: 60%;
-}
-
-.mobile {
-  display: none;
-}
 
 .nav {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: flex-end;
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
   font-family: 'Roboto Mono', monospace;
+  color: white;
+  font-size: 1.1em;
 }
 
-.nav ul {
-  display: flex;
-  padding: 0;
-  margin: 0;
-  text-align: center;
-  margin: 0 auto;
-  padding: 0px;
+.nav-item {
+  padding: 20px 30px 20px 30px;
+} 
+
+.avoid-break {
+  display: none;
 }
 
-.nav li {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  list-style-type: none;
-  padding: 20px 40px 20px 40px;
-  float: left;
-  width: 150px;
-  margin-left: auto;
-  margin-right: auto;
-  font-style: normal;
-  font-variant: normal;
-  font-size: 1vw;
-  font-weight: 300;
-  letter-spacing: .1em;
+#menu {
+  text-align: right;
 }
 
 .nav a {
@@ -111,7 +91,7 @@ div ::selection {
 }
 
 .title .text {
-  padding: 10px 40px;
+  padding: 10px 30px;
   position: absolute;
   text-align: left;
   font-size: .8vw;
@@ -320,9 +300,6 @@ a:link {
 @media screen and (max-width: 1440px) {
 
   /*regular desktop*/
-  .nav li {
-    font-size: 1.3vw;
-  }
 
   .description .text {
     font-size: 1.1vw;
@@ -341,26 +318,8 @@ a:link {
 (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
   /*tablet*/
 
-  .nav ul {
-    max-width: 100%
-  }
-
-  .nav li {
-    font-size: 2vw;
-  }
-
-  .nav ul li:first-child {
-    width: 40%;
-    justify-content: flex-end;
-  }
-
-  .nav ul li:nth-child(2) {
-    width: 20%;
-  }
-
-  .nav ul li:nth-child(3) {
-    width: 40%;
-    justify-content: flex-start;
+  .nav a {
+    text-decoration: underline;
   }
 
   .container {
@@ -482,36 +441,17 @@ a:link {
 @media screen and (max-width: 428px) {
   /* mobile */
 
-  .nav ul {
-    margin: 10px;
+  .nav {
+    font-size: 1em;
   }
 
-  .nav li {
-    font-size: 4vw;
-    order: 2;
-    display: flex;
-    padding: 10px;
+  .avoid-break {
+    display: block;
   }
 
-  .nav ul li:first-child {
-    width: 40%;
-    justify-content: center;
-  }
-
-  .nav ul li:nth-child(2) {
-    width: 20%;
-    /* display: none; */
-  }
-
-  .nav ul li:nth-child(3) {
-    width: 40%;
-    justify-content: center;
-  }
-
-
-  .logo {
-    width: 100%;
-  }
+  .nav-item {
+    padding: 20px 10px 20px 10px;
+  } 
 
   .container {
     grid-template-columns: repeat(1, 1fr);
