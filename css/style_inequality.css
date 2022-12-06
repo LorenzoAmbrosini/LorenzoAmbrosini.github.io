@@ -155,6 +155,17 @@ div ::selection {
   /* object-fit: cover; */
 }
 
+.interactive-title {
+  color: white;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1.1vw;
+  font-weight: bold;
+  padding: 10px 20px;
+  outline: 2px solid white;
+  position: relative;
+  width: fit-content;
+}
+
 .gallery-item .gallery-interactive iframe {
   width: 80%;
   height: 80%;
@@ -478,6 +489,11 @@ a:link {
 
   .bigger_image {
     grid-row: span 3;
+  }
+
+  .interactive-title {
+    font-size: 2.1vw;
+    padding: 10px 30px;
   }
 
   #interaction-text {

@@ -331,11 +331,6 @@ a:link {
     grid-column: span 1;
   }
 
-  .title {
-    grid-row: span 1;
-    height: 20vw;
-  }
-
   .title .text {
     font-size: 1.5vw;
   }
@@ -458,7 +453,7 @@ a:link {
   .title {
     display: flex;
     align-items: center;
-    height: 60vw;
+    height: 30vw;
   }
 
   .title .text {

@@ -417,7 +417,6 @@ a:link {
 
 @media screen and (max-width: 1440px) { /*regular desktop*/
   .welcome {
-    /* font-size: 1.3vw; */
     line-height: 3vw;
   }
 
@@ -429,7 +428,6 @@ a:link {
 @media screen and (max-width: 1024px) { /*small desktop*/
   
   .welcome {
-    /* font-size: 1.8vw; */
     line-height: 3.5vw;
   }
 
@@ -470,8 +468,16 @@ a:link {
     grid-column: span 3;
   }
 
+  #midodafare {
+    grid-column: span 2;
+  }
+
+  #ADO {
+    grid-column: span 1;
+  }
+
   .welcome {
-    /* font-size: 2.3vw; */
+    font-size: 1.1em;
     line-height: 5vw;
   }
 
@@ -567,6 +573,10 @@ a:link {
     grid-column: span 1;
   }
 
+  #midodafare {
+    grid-column: span 1;
+  }
+
   .h-1,
   .h-2,
   .h-3,
@@ -579,7 +589,7 @@ a:link {
 
   #welcome {
     grid-row: span 1;
-    height: 120vw;
+    height: fit-content;
   }
 
   .welcome {
