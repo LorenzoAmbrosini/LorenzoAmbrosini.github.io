@@ -33,6 +33,7 @@ body {
 .nav a {
   display: inline-block;
   position: relative;
+  text-decoration: none;
 }
 
 .nav a:after {
@@ -334,7 +335,8 @@ body {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: underline;
+  text-decoration-color: #fd9b97;
 }
 
 a:visited {
