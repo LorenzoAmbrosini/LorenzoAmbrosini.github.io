@@ -1,0 +1,154 @@
+.fake_footer {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 40px;
+  z-index: -1;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(90deg, #59E6EE, #FA7A75);
+  background-blend-mode: multiply;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 40px;
+  grid-gap: 2px;
+  grid-auto-flow: dense;
+  outline: 2px solid white;
+  align-items: center;
+  color: white;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.projects {
+  grid-template-columns: repeat(6, 1fr);
+  position: relative;
+  bottom: 0;
+}
+
+.back {
+  grid-column: span 4;
+}
+
+.footer .grid-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  outline: 2px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer .white {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.footer .text {
+  font-size: .9vw;
+  font-weight: 300;
+  color: white;
+  text-align: center;
+  position: absolute;
+}
+
+.footer .text a:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transform-origin: bottom right;
+  transition: transform 0.35s ease-out;
+}
+
+.footer .text a:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.footer .white:hover {
+  background: white;
+}
+
+.footer .white:hover .text {
+  background: -webkit-linear-gradient(45deg, #59E6EE, #FA7A75);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media screen and (max-width: 1440px) {
+
+  /*regular desktop*/
+
+  .footer .text {
+    font-size: 1.1vw;
+  }
+}
+
+@media screen and (max-width: 768px),
+(-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  /*tablet*/
+
+  .footer {
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+  }
+
+  .footer .text {
+    font-size: 2vw;
+  }
+
+  .fake_footer {
+    height: 80px;
+  }
+
+
+}
+
+@media screen and (max-width: 428px) {
+  /* mobile */
+  
+  .footer {
+    position: relative;
+    grid-template-columns: repeat(1, 1fr);
+    background: linear-gradient(-30deg, #59E6EE, #FA7A75);
+  }
+
+  .footer .color {
+    background-color: white;
+  }
+
+  .footer .text {
+    font-size: 4.5vw;
+  }
+
+  .footer .color .text {
+    background: -webkit-linear-gradient(180deg, #59E6EE, #FA7A75);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .footer .white:hover {
+    background: transparent;
+  }
+
+  .footer .white:hover .text {
+    color: white;
+    -webkit-text-fill-color: white;
+  }
+
+  .fake_footer {
+    display: none;
+  }
+}

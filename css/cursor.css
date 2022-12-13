@@ -65,7 +65,6 @@ a .normal {
 
 #cursor.hovered {
     opacity: .5;
-    mix-blend-mode: multiply;
     background: #fd9b97;
     transform: scale(4);
 }
