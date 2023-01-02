@@ -58,7 +58,7 @@ body {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: 20vw 15vw;
-  grid-auto-rows: 14vw;
+  grid-auto-rows: minmax(14vw, auto);
   grid-gap: 2px;
   grid-auto-flow: dense;
 }
@@ -276,6 +276,16 @@ body {
   grid-row: span 6;
 }
 
+.funfacts {
+  height: 45vw;
+  grid-row: span 1;
+}
+
+.fake_box {
+  height: 45vw;
+  grid-row: span 1;
+}
+
 .fake_footer {
   position: absolute;
   width: 100%;
@@ -418,7 +428,7 @@ a:link {
   }
 
   .funfacts {
-    height: 75vw;
+    height: 65vw;
     grid-row: span 1;
   }
 
@@ -538,7 +548,7 @@ a:link {
 
   .bio {
     grid-row: span 1;
-    height: 145vw;
+    height: 155vw;
   }
 
   .education {
