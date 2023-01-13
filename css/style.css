@@ -167,7 +167,7 @@ div ::selection {
 }
 
 #inequality .gallery-item .image img{
-  width: 180%;
+  width: 150%;
 }
 
 #refugee .gallery-item .image img{
@@ -183,7 +183,7 @@ div ::selection {
 }
 
 #mafia .gallery-item .image img{
-  width: 400%;
+  width: 300%;
 }
 
 .gallery-item .text {
