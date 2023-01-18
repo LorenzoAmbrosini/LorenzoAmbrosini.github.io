@@ -468,12 +468,58 @@ a:link {
     grid-column: span 3;
   }
 
-  #midodafare {
+  #databricks {
+    grid-column: span 3;
+    order: 1;
+  }
+
+  #refugee {
     grid-column: span 2;
+    order: 2;
+  }
+
+  #youth {
+    order: 3;
+    grid-column: span 3;
+  }
+
+  #newhorizon{
+    order: 4;
+    grid-column: span 1;
+  }
+
+  #feelings {
+    order: 5;
+  }
+
+  #inequality {
+    order: 6;
   }
 
   #ADO {
     grid-column: span 1;
+    order: 7;
+  }
+
+  #deepdive {
+    order: 4;
+    grid-column: span 1;
+  }
+
+  #website {
+    order: 9;
+  }
+
+  #midodafare {
+    order: 10;
+  }
+
+  #scuse{
+    order: 11;
+  }
+
+  #mafia{
+    order: 12;
   }
 
   .welcome {
