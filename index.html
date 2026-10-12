@@ -1,21 +1,22 @@
-<html lang="en" title="Lorenzo Ambrosini / Design portfolio ">
-<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<!--
  _____________________
 /   Hello hackerman,  \
 \   whatcha doin'here? /
   --------------------
 \                             .       .
- \                           / `.   .' " 
+ \                           / `.   .' "
   \                  .---.  <    > <    >  .---.
    \                 |    \  \ - ~ ~ - /  /    |
          _____          ..-~             ~-..-~
         |     |   \~~~\.'                    `./~~~/
        ---------   \__/                        \__/
-      .'  o    \     /               /       \  " 
+      .'  o    \     /               /       \  "
      (_____,    `._.'               |         }  \/~~~/
       `----.          /       }     |        /    \__/
             `-.      |       /      |       /      `. ,~~|
-                ~-.__|      /_ - ~ ^|      /- _      `..-‘ / \  /\
+                ~-.__|      /_ - ~ ^|      /- _      `..-' / \  /\
                      |     /        |     /     ~-.     `-/ _ \/__\
                      |_____|        |_____|         ~ - . _ _ _ _ _ >
 
@@ -23,266 +24,243 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="thumbnail" content="imgs/profile.webp" />
-    <meta
-      name="google-site-verification"
-      content="DCj1O999BLmq7rLji_TsJ-hZqc1xR1eKZPzsOL6vLoU"
-    />
     <title>Lorenzo Ambrosini / Design portfolio</title>
+    <meta name="description" content="Lorenzo Ambrosini, interdisciplinary designer from Northern Italy, trained between Milan and Linköping. Selected work in design research, UX, data visualization and communication design." />
+    <meta name="google-site-verification" content="DCj1O999BLmq7rLji_TsJ-hZqc1xR1eKZPzsOL6vLoU" />
+    <meta name="theme-color" content="#f7f6f3" />
+    <link rel="icon" type="image/svg+xml" href="imgs/favicon.svg" />
     <link rel="icon" type="image/png" href="imgs/favicon.png" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/cursor.css" />
+
+    <script>
+      // Apply a saved theme before first paint to avoid a flash
+      (function () {
+        try {
+          var t = localStorage.getItem("theme");
+          if (t === "light" || t === "dark") document.documentElement.dataset.theme = t;
+        } catch (e) {}
+      })();
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link
-      rel="preconnect"
-      href="https://fonts.gstatic.com"
-      crossorigin="crossorigin"
-    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="js/date.js" defer="defer"></script>
-    <script src="js/cursor.js" defer="defer"></script>
+    <link rel="stylesheet" href="css/site.css" />
+    <script src="js/site.js" defer></script>
   </head>
 
   <body>
-     <div class="nav">
-      <div class="nav-item" id="name">
-        <b>Lorenzo Ambrosini </b><br class="avoid-break" />/ Design portfolio
-      </div>
-      <div class="nav-item" id="menu">
-        <div><a href="about.html" class="a-link">About</a></div>
-      </div>
-    </div>
+    <a class="skip-link" href="#work">Skip to work</a>
 
-    <div class="container">
-      <div class="gallery-container w-3 h-4" id="welcome">
-        <div class="gallery-item">
-          <div class="welcome">
-            Hello there, I'm Lorenzo!
-            <br />
-            25 y/o, made in
-            <span class="gif-hover"> <a>Northern Italy countryside</a>, </span>
-            <div class="gif-image fog">
-              <img src="imgs/gifs/nebbia2.jpg" alt="image" />
-            </div>
-            trained between Milan and Linköping, I'm an interdisciplinary
-            <span class="gif-hover"> <a>Designer</a>, </span>
-            <div class="gif-image designer">
-              <img src="imgs/gifs/wolf.webp" alt="image" />
-            </div>
-            but my mom says I draw doodles.
-            <br /><br />
-            Check out my projects and have an awesome
-            <div id="date"></div>
-            ✌🏻
-          </div>
-        </div>
-      </div>
-
-      <div class="gallery-container w-1 h-3" id="scrollbox">
-        <div class="indicator">
-          <div class="mouse">
-            <div class="scroller"></div>
-          </div>
-          <div class="text">SCROLL DOWN</div>
-        </div>
-      </div>
-
-      <div class="gallery-container w-3 h-4" id="databricks">
-        <div class="gallery-item">
-          <div class="text">
-            <a href="databricks.html" class="a-link">
-              <div>Data Bricks Space Mission</div>
-            </a>
-          </div>
-          <div class="image">
-            <img src="imgs/Databricks/lego.webp" alt="image" />
-          </div>
-        </div>
-      </div>
-
-      <div class="gallery-container w-2 h-4" id="youth">
-        <div class="gallery-item">
-          <div class="text">
-            <a href="youth.html" class="a-link">
-              <div>Youths' Dialogue</div>
-            </a>
-          </div>
-          <div class="image">
-            <img loading="lazy" decoding="async" src="imgs/Studio2/lamp.webp" alt="image" />
-          </div>
-        </div>
-      </div>
-
-      <div class="gallery-container w-2 h-4" id="newhorizon">
-        <div class="gallery-item">
-          <div class="text">
-            <a href="newhorizon.html" class="a-link">
-              <div>New Horizon</div>
-            </a>
-          </div>
-          <div class="image">
-            <img loading="lazy" decoding="async" src="imgs/New Horizon/new_horizon_bg1.webp" alt="image" />
-          </div>
-        </div>
-      </div>
-
-      <div class="gallery-container w-2 h-4" id="refugee">
-        <div class="gallery-item">
-          <div class="text">
-            <a href="refugee.html" class="a-link">
-              <div>Refugee Healthcare</div>
-            </a>
-          </div>
-          <div class="image">
-            <img loading="lazy" decoding="async" src="imgs/Refugee Healthcare/Refugee_IG.webp" alt="image" />
-          </div>
-        </div>
-      </div>
-
-      <div class="gallery-container w-3 h-4" id="feelings">
-        <div class="gallery-item">
-          <div class="text">
-            <a href="feelings.html" class="a-link">
-              <div>
-                One week of feelings <br />
-                in my apartment
-              </div>
-            </a>
-          </div>
-          <div class="image">
-            <img loading="lazy" decoding="async" src="imgs/Week of feelings/emotions_2.webp" alt="image" />
-          </div>
-        </div>
-      </div>
-
-      <div class="gallery-container w-3 h-4" id="inequality">
-        <div class="gallery-item">
-          <div class="text">
-            <a href="inequality.html" class="a-link">
-              <div>Is inequality really unequal?</div>
-            </a>
-          </div>
-          <div class="image">
-            <img loading="lazy" decoding="async" src="imgs/Inequality/Inequality_Background.webp" alt="image" />
-          </div>
-        </div>
-      </div>
-
-      <div class="gallery-container w-2 h-4" id="ADO">
-        <div class="gallery-item">
-          <div class="text">
-            <a href="ADO.html" class="a-link">
-              <div>ADO</div>
-            </a>
-          </div>
-          <div class="image">
-            <img loading="lazy" decoding="async" src="imgs/ADO/ADO.webp" alt="image" />
-          </div>
-        </div>
-      </div>
-
-      <div class="gallery-container w-3 h-4" id="deepdive">
-        <div class="gallery-item">
-          <div class="text">
-            <a href="deepdive.html" class="a-link">
-              <div>Deep Dive</div>
-            </a>
-          </div>
-          <div class="image">
-            <img loading="lazy" decoding="async" src="imgs/Deep dive/deepdive_3.webp" alt="image" />
-          </div>
-        </div>
-      </div>
-
-      <div class="gallery-container w-1 h-4" id="website">
-        <div class="gallery-item">
-          <div class="text">
-            <a href="website.html" class="a-link">
-              <div>This very website</div>
-            </a>
-          </div>
-          <div class="image">
-            <img loading="lazy" decoding="async" src="imgs/website/screen_homepage.webp" alt="image" />
-          </div>
-        </div>
-      </div>
-
-      <div class="gallery-container w-2 h-4" id="midodafare">
-        <div class="gallery-item">
-          <div class="text">
-            <a href="midodafare.html" class="a-link">
-              <div>Mi do da fare</div>
-            </a>
-          </div>
-          <div class="image">
-            <img loading="lazy" decoding="async" src="imgs/Mi do da fare/brochure2.webp" alt="image" />
-          </div>
-        </div>
-      </div>
-
-      <div class="gallery-container w-2 h-4" id="scuse">
-        <div class="gallery-item">
-          <div class="text">
-            <a href="noncisonoscuse.html" class="a-link">
-              <div>Non ci sono scuse</div>
-            </a>
-          </div>
-          <div class="image">
-            <img loading="lazy" decoding="async" src="imgs/Non ci sono scuse/Mockup.webp" alt="image" />
-          </div>
-        </div>
-      </div>
-
-      <div class="gallery-container w-2 h-4" id="mafia">
-        <div class="gallery-item">
-          <div class="text">
-            <a href="mafia.html" class="a-link">
-              <div>La mafia uccide solo d'estate</div>
-            </a>
-          </div>
-          <div class="image">
-            <img loading="lazy" decoding="async" src="imgs/Mafia/mafia1.webp" alt="image" />
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="footer">
-      <div class="grid-container color">
-        <div class="text">
-          <b>Let's have a chat!</b>
-        </div>
-      </div>
-      <div class="grid-container white a-link">
-        <a href="mailto:ambrosini.lorenz@gmail.com">
-          <div class="text">Email</div>
+    <header class="site-header">
+      <div class="wrap">
+        <a class="home" href="index.html">
+          <b class="home-name">Lorenzo Ambrosini</b> <span class="home-sub">/ Design portfolio</span>
         </a>
+        <div class="header-right">
+          <a class="nav-link" href="about.html">About</a>
+          <button class="theme-toggle" type="button" aria-label="Switch theme">
+            <span class="dot" aria-hidden="true"></span>
+            <span class="text">Theme</span>
+          </button>
+        </div>
       </div>
-      <div class="grid-container white a-link">
-        <a
-          href="https://www.linkedin.com/in/lorenzo-ambrosini-6a964b138/"
-          target="”_blank”"
-        >
-          <div class="text">Linkedin</div>
-        </a>
-      </div>
-      <div class="grid-container white a-link">
-        <a href="https://www.instagram.com/loram.ipsum/" target="”_blank”">
-          <div class="text">Instagram</div>
-        </a>
-      </div>
-    </div>
+    </header>
 
-    <div class="fake_footer"></div>
+    <main>
+      <div class="showcase wrap">
+      <section class="hero" aria-labelledby="hello">
+        <h1 id="hello" class="reveal" style="--i: 0">Hello there, I'm <span class="name-gradient">Lorenzo</span>!</h1>
 
-    <div id="cursor"></div>
-    <div id="circle"></div>
+        <p class="intro reveal" style="--i: 1">
+          <span id="age" data-born="1997-12-09">28</span> y/o, made in
+          <span class="nowrap"><span class="peek"
+            >Northern Italy countryside<img
+              class="peek-img"
+              src="imgs/thumbs/fog.webp"
+              alt=""
+              width="444"
+              height="560"
+          /></span>,</span> trained between Milan and Linköping, I'm an interdisciplinary
+          <span class="nowrap"><span class="peek"
+            >Designer<img
+              class="peek-img"
+              src="imgs/gifs/wolf.webp"
+              alt=""
+              width="500"
+              height="213"
+          /></span>,</span> but my mom says I draw doodles.
+        </p>
+
+        <p class="signoff reveal" style="--i: 2">
+          Check out my projects and have an awesome <span id="day">day</span> ✌🏻
+        </p>
+      </section>
+
+      <section class="work" id="work" aria-label="Projects">
+
+        <ul class="cards">
+          <li class="card">
+            <a href="databricks.html">
+              <div class="meta label">Design research</div>
+              <h3>Data Bricks Space Mission<span class="go" aria-hidden="true">→</span></h3>
+              <p>Teaching kids about data with Lego bricks and a space adventure.</p>
+              <figure>
+                <img src="imgs/thumbs/databricks.webp" alt="Lego astronaut and bricks floating in space" width="1200" height="900" />
+              </figure>
+            </a>
+          </li>
+
+          <li class="card">
+            <a href="youth.html">
+              <div class="meta label">UX design</div>
+              <h3>Youths' Dialogue<span class="go" aria-hidden="true">→</span></h3>
+              <p>Opening a dialogue between young people and the municipality of Linköping.</p>
+              <figure>
+                <img src="imgs/thumbs/youth.webp" alt="Illustration of a street lamp, a table and a feedback screen" width="1200" height="788" loading="lazy" decoding="async" />
+              </figure>
+            </a>
+          </li>
+
+          <li class="card">
+            <a href="newhorizon.html">
+              <div class="meta label">Speculative design</div>
+              <h3>New Horizon<span class="go" aria-hidden="true">→</span></h3>
+              <p>A future shaped by climate change, and how far we let technology go.</p>
+              <figure>
+                <img src="imgs/thumbs/newhorizon.webp" alt="Burnt forest under a foggy sky" width="1200" height="675" loading="lazy" decoding="async" />
+              </figure>
+            </a>
+          </li>
+
+          <li class="card">
+            <a href="refugee.html">
+              <div class="meta label">Illustration, storytelling</div>
+              <h3>Refugee Healthcare<span class="go" aria-hidden="true">→</span></h3>
+              <p>An illustrated story about healthcare for people forced to leave home.</p>
+              <figure>
+                <img src="imgs/thumbs/refugee.webp" alt="Phones showing illustrated story posts" width="1200" height="675" loading="lazy" decoding="async" />
+              </figure>
+            </a>
+          </li>
+
+          <li class="card">
+            <a href="feelings.html">
+              <div class="meta label">Data visualization</div>
+              <h3>One week of feelings in my apartment<span class="go" aria-hidden="true">→</span></h3>
+              <p>Hand-drawn data on a week of emotions at home during lockdown.</p>
+              <figure>
+                <img src="imgs/thumbs/feelings.webp" alt="Hand-drawn circles of different sizes representing emotions" width="1200" height="715" loading="lazy" decoding="async" />
+              </figure>
+            </a>
+          </li>
+
+          <li class="card">
+            <a href="inequality.html">
+              <div class="meta label">Data visualization</div>
+              <h3>Is inequality really unequal?<span class="go" aria-hidden="true">→</span></h3>
+              <p>Data storytelling on wealth disparity in the United States.</p>
+              <figure>
+                <img src="imgs/thumbs/inequality.webp" alt="Map of the United States" width="1200" height="825" loading="lazy" decoding="async" />
+              </figure>
+            </a>
+          </li>
+
+          <li class="card">
+            <a href="ADO.html">
+              <div class="meta label">Interaction design</div>
+              <h3>ADO<span class="go" aria-hidden="true">→</span></h3>
+              <p>An interactive tale about information noise, built with p5.js.</p>
+              <figure>
+                <img src="imgs/thumbs/ado.webp" alt="ADO project logo" width="848" height="1200" loading="lazy" decoding="async" />
+              </figure>
+            </a>
+          </li>
+
+          <li class="card">
+            <a href="deepdive.html">
+              <div class="meta label">Virtual reality</div>
+              <h3>Deep Dive<span class="go" aria-hidden="true">→</span></h3>
+              <p>Meeting the whales of the North Sea in an immersive VR experience.</p>
+              <figure>
+                <img src="imgs/thumbs/deepdive.webp" alt="Underwater VR scene with a diving mask" width="1200" height="675" loading="lazy" decoding="async" />
+              </figure>
+            </a>
+          </li>
+
+          <li class="card">
+            <a href="midodafare.html">
+              <div class="meta label">Editorial, motion graphics</div>
+              <h3>Mi do da fare<span class="go" aria-hidden="true">→</span></h3>
+              <p>Explaining Milan's community service programme through motion and print.</p>
+              <figure>
+                <img src="imgs/thumbs/midodafare.webp" alt="Printed brochure for the Mi do da fare programme" width="1200" height="800" loading="lazy" decoding="async" />
+              </figure>
+            </a>
+          </li>
+
+          <li class="card">
+            <a href="noncisonoscuse.html">
+              <div class="meta label">Advertising</div>
+              <h3>Non ci sono scuse<span class="go" aria-hidden="true">→</span></h3>
+              <p>An ironic campaign against drunk driving for the City of Milan.</p>
+              <figure>
+                <img src="imgs/thumbs/noncisonoscuse.webp" alt="Campaign poster at a bus stop" width="1200" height="675" loading="lazy" decoding="async" />
+              </figure>
+            </a>
+          </li>
+
+          <li class="card">
+            <a href="mafia.html">
+              <div class="meta label">Editorial design</div>
+              <h3>La mafia uccide solo d'estate<span class="go" aria-hidden="true">→</span></h3>
+              <p>Translating Pif's film into an editorial piece.</p>
+              <figure>
+                <img src="imgs/thumbs/mafia.webp" alt="Editorial layout based on the film" width="1200" height="800" loading="lazy" decoding="async" />
+              </figure>
+            </a>
+          </li>
+
+          <li class="card">
+            <a href="website.html">
+              <div class="meta label">Web design, code</div>
+              <h3>This very website<span class="go" aria-hidden="true">→</span></h3>
+              <p>A portfolio coded from a blank HTML file.</p>
+              <figure>
+                <img src="imgs/thumbs/website.webp" alt="Screenshot of the previous portfolio homepage" width="1200" height="687" loading="lazy" decoding="async" />
+              </figure>
+            </a>
+          </li>
+        </ul>
+      </section>
+      </div>
+    </main>
+
+    <footer class="site-footer" id="contact">
+      <div class="wrap">
+        <div class="lead">
+          <div>
+            <h2>Let's have <span class="serif">a chat!</span></h2>
+            <a class="email-btn" href="mailto:ambrosini.lorenz@gmail.com">
+              ambrosini.lorenz@gmail.com <span aria-hidden="true">→</span>
+            </a>
+          </div>
+          <ul class="contact-links">
+            <li>
+              <a href="https://www.linkedin.com/in/lorenzo-ambrosini-6a964b138/" target="_blank" rel="noopener">LinkedIn <span class="arrow" aria-hidden="true">↗</span></a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/loram.ipsum/" target="_blank" rel="noopener">Instagram <span class="arrow" aria-hidden="true">↗</span></a>
+            </li>
+          </ul>
+        </div>
+        <div class="base label">
+          <span>© <span id="year">2026</span> Lorenzo Ambrosini</span>
+          <a href="#hello">Back to top ↑</a>
+        </div>
+      </div>
+    </footer>
   </body>
-
-  <script></script>
 </html>
